@@ -1,5 +1,5 @@
 # zk-messagequeue
-基于zookeeper实现的消息队列
+基于zookeeper实现的消息队列，为了了解message-queue的一些原理，基于zookeeper实现了一个简单的队列demo
 
 ## 创建队列
 所有的队列都创建在/queues/{queuename}目录下，

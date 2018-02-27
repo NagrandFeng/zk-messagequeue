@@ -67,6 +67,7 @@ public class ZkMQDemo {
             //创建binding
             String path =  BINDINGS + "/" + exchange + "/" + routingKey + "/" + queue;
             if (!isPathExist(path)) {
+                //zk的客户端无法一次性将path创建
                 createPath(BINDINGS+"/"+exchange,CreateMode.PERSISTENT);
                 createPath(BINDINGS+"/"+exchange+"/" + routingKey,CreateMode.PERSISTENT);
                 createPath(path, CreateMode.PERSISTENT);
