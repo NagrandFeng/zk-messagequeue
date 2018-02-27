@@ -14,7 +14,7 @@ public class Consumer implements Runnable{
     }
 
     public void run() {
-        zkMQDemo.consume("ysf-queue");
+        zkMQDemo.consume("test-queue");
     }
 
     public static void main(String[] args) throws Exception{
@@ -22,9 +22,6 @@ public class Consumer implements Runnable{
         Thread t1 = new Thread(consumer);
         t1.start();
 
-        Consumer consumer2 = new Consumer();
-        Thread t2 = new Thread(consumer2);
-        t2.start();
 
     }
 
