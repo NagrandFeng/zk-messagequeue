@@ -140,7 +140,7 @@ public class ZkMQDemo {
                     //比较过后最后由appendHead方法把数字前的0都补充完全
                     Integer min = new Integer(childrenList.get(0).substring(7));
 
-                    //这种比较方式待优化
+                    //这种比较方式待优化,
                     for (String path : childrenList) {
                         Integer tempValue = new Integer(path.substring(7));
                         if (tempValue < min) {
