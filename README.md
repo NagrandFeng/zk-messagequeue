@@ -19,11 +19,14 @@ binding创建在 /bindings/{exchangename}/{routingkeyname}/{queuename}
 读取/queues/{queuename}/下的所有消息，取得最小下标对应的消息（最先push进队列的消息），读取成功后删除对应的element{index}
 
 ## 备注
+
 ### 多消费者并发问题
 在单进程下没有问题，启动多线程时，删除element有问题
 
 多线程下可以
+
 1.使用轮询的方式保证一条消息只被一个消费者接到(rabbitmq)
+
 2.消息在服务器端分片，不同消费者消费不同片段的消息
 
 ### 消息发送和消费的确认问题
